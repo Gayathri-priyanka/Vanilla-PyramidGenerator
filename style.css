@@ -1,0 +1,104 @@
+/* General reset and styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    color: #333;
+  }
+  
+  .outer {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .inner-top h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .inner-bottom input,
+  .inner-bottom button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .inner-bottom input {
+    width: calc(100% - 20px);
+    max-width: 300px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .inner-bottom button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .inner-bottom button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  #pyramidOutput {
+    font-family: monospace;
+    white-space: pre-wrap;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2em;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  /* Fade-in animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animation to pyramidOutput */
+  #pyramidOutput {
+    font-family: monospace;
+    white-space: pre-wrap;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2em;
+    max-height: 300px;
+    overflow-y: auto;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards; /* Added fadeIn animation */
+  }
+  
+  
