@@ -50,6 +50,7 @@
   
   .inner-bottom button {
     background-color: #4CAF50;
+    border-radius: 20%;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -71,6 +72,8 @@
     font-size: 1.2em;
     max-height: 300px;
     overflow-y: auto;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards; /* Added fadeIn animation */
   }
 
   /* Fade-in animation */
@@ -85,20 +88,7 @@
     }
   }
   
-  /* Apply animation to pyramidOutput */
-  #pyramidOutput {
-    font-family: monospace;
-    white-space: pre-wrap;
-    padding: 15px;
-    margin-top: 20px;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
-    border-radius: 8px;
-    color: #333;
-    font-size: 1.2em;
-    max-height: 300px;
-    overflow-y: auto;
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards; /* Added fadeIn animation */
-  }
+
+  
   
   
