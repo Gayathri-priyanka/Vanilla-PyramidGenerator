@@ -1,4 +1,5 @@
-const character = "#";
+let character = "!";
+let inverted = false;
 
 function padRow(rowNumber, rowCount) {
   return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
@@ -10,18 +11,21 @@ function buildPyramid() {
   if (isNaN(rowCount) || rowCount < 1) {
     alert("Please enter a valid number of rows.");
     return;
-
   }
 
-  let rows = [];
+  const rows = [];
   for (let i = 1; i <= rowCount; i++) {
-    rows.push(padRow(i, rowCount));
+    if (inverted) {
+      rows.unshift(padRow(i, rowCount));
+    } else {
+      rows.push(padRow(i, rowCount));
+    }
   }
 
   document.getElementById("pyramidOutput").textContent = rows.join("\n");
-  document.getElementById("pyramidOutput").style.animation = "none";
-setTimeout(() => {
-  document.getElementById("pyramidOutput").style.animation = "";
-}, 0);
+}
 
+function toggleInvert() {
+  inverted = !inverted; 
+  buildPyramid(); 
 }
