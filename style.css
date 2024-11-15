@@ -60,6 +60,10 @@
     background-color: #45a049;
     transform: scale(1.05);
   }
+  .inner-bottom button:nth-child(3) {
+    font-size: 14px;
+    transform: rotate(180deg);
+  }
   
   #pyramidOutput {
     font-family: monospace;
@@ -69,7 +73,6 @@
     background: linear-gradient(120deg, #ff9a9e, #fad0c4);
     border-radius: 8px;
     color: #333;
-    font-size: 1.2em;
     max-height: 300px;
     overflow-y: auto;
     opacity: 0;
